@@ -166,7 +166,7 @@ body{
 .card__text-title{
   margin-bottom: 9px;
 }
-.discover__cards{
+.discover__card-inner{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 33px;
@@ -181,14 +181,14 @@ body{
 .card__text-subtitle{
   color: #636060;
 }
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1140px) {
  
 	.container{
-		max-width: 1024px;
+		max-width: 994px;
 		margin: 0 auto;
 	}
 	.discover__cards{
-		display: block;
+		display: block;	
 		width: 700px;
 		position: relative;
 		overflow: hidden;
@@ -200,9 +200,7 @@ body{
 		animation-duration: 15s;
 		animation-iteration-count:infinite;
 	}
-	.discover__card-inner:hover{
-		animation-play-state: paused;
-	}
+	
 	.discover__card{
 		display: inline-block;
 		position: absolute;
@@ -240,4 +238,14 @@ body{
 			transform: translateX();
 		}
 	}	
+}
+@media (hover: hover){
+	.discover__card-inner:hover{
+		animation-play-state: paused;
+	}
+}
+@media (hover: none){
+	.discover__card-inner:active{
+		animation-play-state: paused;
+	}
 }
