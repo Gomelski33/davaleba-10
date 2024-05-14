@@ -118,6 +118,8 @@ body{
   color: #636060;
   font-size: 17px;
 }
+.header__burger{
+}
 .greece{
   background-image: url("../img/back.jpg") ;
   background-repeat: no-repeat;
@@ -232,7 +234,7 @@ body{
 
 		}
 		50%{
-			transform: translateX(var(--index));
+			transform: translateX(-100vh);
 		}
 		100%{
 			transform: translateX();
@@ -247,5 +249,83 @@ body{
 @media (hover: none){
 	.discover__card-inner:active{
 		animation-play-state: paused;
+	}
+}
+@media screen and (max-width: 800px) {
+	.discover__cards{
+		width: auto;
+	}
+	.discover__card-inner{
+		animation-name: none;
+		
+	}
+	.discover__inner{
+		display: block;
+		align-items: center;
+		text-align: center;
+	}
+	.discover__content{
+		text-align: center;
+		margin: 0 auto;
+	}
+	.discover__top{
+		
+	}
+	.discover__text{
+		display: none;
+	}
+
+	.discover__card-inner{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		
+		
+	}
+	.discover__card{
+		display: unset;
+		position: unset;
+
+	
+	}
+}
+@media screen and (max-width: 680px) {
+	.discover__card-inner{
+		display: flex;
+		flex-wrap: wrap;
+		
+	}
+	.discover__cards{
+		width: auto;
+	}
+	.discover__card-inner{
+		justify-content: center;
+	}
+	.header__items{
+		display: none;
+	}
+	.header__burger span{
+		display: flex;
+		width: 30px;
+		height: 4px;
+		background-color: black;
+		margin-bottom: 4px;
+		border-radius: 2rem	;
+	}
+	.greece__title{
+		font-size: 50px;
+		color: black;
+	}
+	.greece__subtitle{
+		color: black;
+		font-size: 15px;
+	}
+	.greece{
+		height: 500px;
+	}
+}
+@media screen and (max-width: 480px){
+	.greece{
+		height: 300px;
 	}
 }
